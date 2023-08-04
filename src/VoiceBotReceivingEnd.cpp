@@ -134,8 +134,6 @@ void loop() {
 
           calculatedDistance = (0.034*timeTaken) / 2; 
 
-          Serial.println(data);
-
           if (calculatedDistance > 5){
             if (data == 'F'){
               forward();
