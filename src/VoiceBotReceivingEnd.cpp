@@ -3,6 +3,7 @@
 #include <credentials.h>
 
 int ledPin = 32;
+int ledBuiltIn = 2;
 
 int motorIn1 = 13;
 int motorIn2 = 12;
@@ -120,6 +121,7 @@ void loop() {
   if (client) {
     while (client.connected()) {
       if (client.available()) {
+        digitalWrite(ledBuiltIn, HIGH);
         String request = client.readStringUntil('\r');
         fullData = client.readString();
         data = fullData[fullData.length() - 1];
@@ -162,6 +164,7 @@ void loop() {
     }
     client.stop();
     Serial.println("Client disconnected.");
+    digitalWrite(ledBuiltIn, LOW);
   }
 delay(1000);
 stop();
