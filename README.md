@@ -48,4 +48,6 @@ The Python script for this project can be found in the ``server`` folder and the
 
  The exit command will stop voice recognition if you wish to exit.
 
+ 4. One can also create their commands by either replacing a preexisting command or adding a new command to the _defaultCommands_ dictionary in ```server/VoiceBotClientEnd.py```
+
    
